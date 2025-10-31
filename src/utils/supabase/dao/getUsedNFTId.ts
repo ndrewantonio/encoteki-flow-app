@@ -9,7 +9,7 @@ export async function getUsedNFTId(
 
   // Get data of NFT Id that has vote
   const { data: hasVoteNfts, error } = await supabase
-    .from('mapping_vote')
+    .from('mapping_vote_flow')
     .select('nft_id')
     .eq('dao_id', daoId)
     .eq('chain_id', chainId)

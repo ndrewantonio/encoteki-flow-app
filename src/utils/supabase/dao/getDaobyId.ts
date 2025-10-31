@@ -4,7 +4,7 @@ export async function getDaoById(daoId: number) {
   const supabase = createClient()
 
   const { data, error } = await supabase
-    .from('dao')
+    .from('dao_flow')
     .select('*')
     .eq('dao_id', daoId)
     .single()

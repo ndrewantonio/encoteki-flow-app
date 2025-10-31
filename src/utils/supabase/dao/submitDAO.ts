@@ -10,7 +10,7 @@ export async function submitDAO(request: SubmitVoteDto): Promise<boolean> {
 
   try {
     const { error } = await supabase
-      .from('mapping_vote')
+      .from('mapping_vote_flow')
       .insert([{ chain_id, nft_id, dao_id, option_id, isNeutral }])
 
     if (error) {

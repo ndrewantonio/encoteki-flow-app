@@ -5,7 +5,7 @@ export async function getDaoResults(daoId: number) {
   const supabase = createClient()
 
   const { data, error } = await supabase
-    .from('mapping_vote')
+    .from('mapping_vote_flow')
     .select('option_id, dao_id, option!left(option_name)')
     .eq('dao_id', daoId)
     .eq('isNeutral', false)
