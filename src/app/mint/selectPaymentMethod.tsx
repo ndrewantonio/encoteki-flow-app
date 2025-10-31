@@ -4,7 +4,7 @@ import MintPageHeading from '@/components/heading/mintPageHeading'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import Image from 'next/image'
-import RainbowKit from '@/assets/mint/rainbow_kit.png'
+import Flow from '@/assets/mint/flow.jpeg'
 import QRIS from '@/assets/mint/qris.svg'
 import { useMintCtx } from '@/context/mintContext'
 import { useConnectModal } from '@rainbow-me/rainbowkit'
@@ -22,9 +22,9 @@ export default function SelectPaymentMethod() {
   const payments = [
     {
       index: 0,
-      name: 'Rainbow Kit',
+      name: 'Flow',
       method: PaymentMethod.wallet,
-      icon: RainbowKit,
+      icon: Flow,
     },
     {
       index: 1,
@@ -79,6 +79,7 @@ export default function SelectPaymentMethod() {
                     alt={payment.name}
                     width={32}
                     height={32}
+                    className="rounded-md"
                   />
 
                   <Label htmlFor={payments[index].method} className="text-base">

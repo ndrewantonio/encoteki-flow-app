@@ -123,8 +123,6 @@ export default function CreateForm() {
         },
       })
 
-      console.dir(JSON.parse(response.text ?? '') ?? '')
-
       const twoWeeksLater = new Date()
       twoWeeksLater.setDate(twoWeeksLater.getDate() + 14)
 
@@ -273,7 +271,7 @@ export default function CreateForm() {
                     Currency
                   </label>
                   <select
-                    className="border-0 bg-transparent text-small text-default-400 outline-none"
+                    className="border-0 bg-transparent text-default-400 outline-none text-small"
                     id="currency"
                     name="currency"
                   >

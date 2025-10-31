@@ -6,8 +6,6 @@ export async function submitDAO(request: SubmitVoteDto): Promise<boolean> {
 
   const { chain_id, nft_id, dao_id, option_id, isNeutral } = request
 
-  console.log(`chainid: ${chain_id}`)
-
   try {
     const { error } = await supabase
       .from('mapping_vote_flow')

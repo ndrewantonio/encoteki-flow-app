@@ -115,7 +115,7 @@ export default function DAODetailPage({ params }: { params: Params }) {
       ])) as [DAOResponse, OptionsResponse[]]
 
       document.title = daoData.dao_name
-      console.dir(daoData)
+
       setDao(daoData)
       setOptions(optionsData)
     }
@@ -571,7 +571,7 @@ function BusinessDetails({
                 Currency
               </label>
               <select
-                className="border-0 bg-transparent text-small text-default-400 outline-none"
+                className="border-0 bg-transparent text-default-400 outline-none text-small"
                 id="currency"
                 name="currency"
               >

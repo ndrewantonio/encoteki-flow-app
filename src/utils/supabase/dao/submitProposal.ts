@@ -27,8 +27,6 @@ export async function submitProposal(
       .select()
       .single()
 
-    console.dir(proposalData)
-
     const { data, error } = await supabase
       .from('dao')
       .insert({
@@ -41,8 +39,6 @@ export async function submitProposal(
       })
       .select()
       .single()
-
-    console.dir(data)
 
     if (proposalError || error) {
       console.error('Error submit DAO:', proposalError?.message)
