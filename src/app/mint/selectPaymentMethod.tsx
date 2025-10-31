@@ -97,7 +97,7 @@ export default function SelectPaymentMethod() {
             <p>Amount</p>
             <p>
               {isWalletPayment
-                ? `${costValue.native} ${costValue.eth}`
+                ? `${costValue.native} FLOW`
                 : `Rp. ${(300000).toLocaleString('id-ID')}`}
             </p>
           </div>
